@@ -403,6 +403,11 @@ h6 { font-size: 16px;}
 	color: white;
 }
 
+#social_container{
+	display:flex; 
+	justify-content:space-between;
+}
+
 
 @media screen and (max-width: 1200px){
 	.main-container{
@@ -426,7 +431,7 @@ h6 { font-size: 16px;}
 
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 548px){
 	#preview-shadow{
 		max-width: 280px;
 		height: 180px;
@@ -439,4 +444,8 @@ h6 { font-size: 16px;}
 
 	}
 
+	#social_container{
+		display: block;
+		text-align: center;
+	}
 }
