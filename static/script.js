@@ -22,18 +22,22 @@ for (var i=0; themeDots.length > i; i++){
 function setTheme(mode){
 	if(mode == 'light'){
 		document.getElementById('theme-style').href = 'static/default.css'
+		document.getElementById('humber_logo').src = "static/images/Humber_Logo_Black.png"
 	}
 
 	if(mode == 'blue'){
 		document.getElementById('theme-style').href = 'static/blue.css'
+		document.getElementById('humber_logo').src = "static/images/Humber_Logo_White.png"
 	}
 
 	if(mode == 'green'){
 		document.getElementById('theme-style').href = 'static/green.css'
+		document.getElementById('humber_logo').src = "static/images/Humber_Logo_White.png"
 	}
 
 	if(mode == 'purple'){
 		document.getElementById('theme-style').href = 'static/purple.css'
+		document.getElementById('humber_logo').src = "static/images/Humber_Logo_White.png"
 	}
 
 	localStorage.setItem('theme', mode)
