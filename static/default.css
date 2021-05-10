@@ -16,6 +16,8 @@
     --buttonColor:black;
 
 	--infoColor:black;
+
+	--list_projects:black;
 }
 
 html, body{
@@ -29,13 +31,12 @@ body *{
 
 h1,h2,h3,h4,h5,h6,strong{
     color: var(--mainText);
-    font-family: 'Itim', cursive;
-    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
 }
 
 p,li,span,label,input,textarea{
     color: var(--mainText);
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
 }
 
 a{
@@ -366,7 +367,7 @@ h6 { font-size: 16px;}
 }
 
 #contact_info{
-	font-family: 'Itim', cursive;
+	font-family: 'Open Sans', sans-serif;
 	color: var(--infoColor);
 	font-size: 20px;
 	cursor: pointer;
@@ -408,6 +409,10 @@ h6 { font-size: 16px;}
 	justify-content:space-between;
 }
 
+#list_projects{
+	color: var(--list_projects);
+}
+	
 
 @media screen and (max-width: 1200px){
 	.main-container{
