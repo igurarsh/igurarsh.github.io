@@ -1,214 +1,456 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Gurarshdeep Singh</title>
+:root{
+    --mainColor:#eaeaea;
+    --secondaryColor:#fff;
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    --borderColor:#c1c1c1;
 
-	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    --mainText:black;
+    --secondaryText:#4b5156;
 
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+    --themeDotBorder:#23292e;
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    --previewBg:rgb(251,249,243,0.8);
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    --previewShadow: #f0ead6;
 
-	<link rel="stylesheet" type="text/css" href="static/default.css">
-	<link id="theme-style" rel="stylesheet" type="text/css" href="">
-</head>
+    --buttonColor:black;
 
-<body>
+	--infoColor:black;
 
-	<section class="s1">
-		<div class="main-container">
-			<div class="greeting-wrapper">
-				<h1>Hi, I'm Gurarshdeep Singh</h1>
-			</div>
+	--list_projects:black;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+body *{
+    transition: 0.5s;
+}
+
+h1,h2,h3,h4,h5,h6,strong{
+    color: var(--mainText);
+    font-family: 'Open Sans', sans-serif;
+}
+
+p,li,span,label,input,textarea{
+    color: var(--mainText);
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #17a2b8;
+}
+
+ul{
+    list-style: none;
+}
+
+h1 { font-size: 56px;}
+h2 { font-size: 36px;}
+h3 { font-size: 28px;}
+h4 { font-size: 24px;}
+h5 { font-size: 20px;}
+h6 { font-size: 16px;}
+
+.s1{
+    background-color: var(--mainColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+
+.s2{
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--borderColor);
+    overflow: auto;
+}
+
+.main-container{
+	width: 1200px;
+	margin: 0 auto;
+}
 
 
-			<div class="intro-wrapper">
-				<div class="nav-wrapper">
+.greeting-wrapper{
+	display: grid;
+	text-align: center;
+	align-content: center;
+	min-height: 10em;
 
-					<!-- Link around dots-wrapper added after tutorial video -->
-					<a href="index.html">
-						<div class="dots-wrapper">
-							<div id="dot-1" class="browser-dot"></div>
-							<div id="dot-2" class="browser-dot"></div>
-							<div id="dot-3" class="browser-dot"></div>
-						</div>
-					</a>
-					
+}
 
-					<ul id="navigation">
-						<li><a href="index.html#contact">Contact</a></li>
+.intro-wrapper{
+	background-color: var(--secondaryColor);
+	border:1px solid var(--borderColor);
+	border-radius:5px 5px 0 0;
 
-					</ul>
-				</div>
 
-				<div class="left-column">
-					<img id="profile_pic" src="static/images/guru.jpg">
-					<h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
+	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
 
-					<div id="theme-options-wrapper">
-						<div data-mode="light" id="light-mode" class="theme-dot"></div>
-						<div data-mode="blue" id="blue-mode" class="theme-dot"></div>
-						<div data-mode="green" id="green-mode" class="theme-dot"></div>
-						<div data-mode="purple" id="purple-mode" class="theme-dot"></div>
-					</div>
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+		'nav-wrapper nav-wrapper'
+		'left-column right-column'
+	;
+}
 
-					<p id="settings-note">Theme settings will be saved for<br>your next vist :)</p>
-				</div>
 
-				<div class="right-column">
+.nav-wrapper{
+	border-radius:5px 5px 0 0;
+	grid-area:nav-wrapper;
+	border-bottom: 1px solid var(--borderColor);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--mainColor);
+}
 
-					<div id="preview-shadow">
-						<div id="preview">
-							<div id="corner-tl" class="corner"></div>
-							<div id="corner-tr" class="corner"></div>
-							<h3>What I do</h3>
-							<p>I am currently polishing my coding skills <br> and is looking for web devolper jobs to put reflect my shine ;)</p>
-							<div id="corner-br" class="corner"></div>
-							<div id="corner-bl" class="corner"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+#navigation a{
+	color:var(--mainText);
+}
 
-	<section class="s2">
-		<div class="main-container">
 
-			<div class="about-wrapper">
-				<div class="about-me">
-					<h4>More about me</h4>
+#navigation{
+	margin:0;
+	padding: 10px;
+}
 
-					<p>I build new projects just to tickle my brain and increase my coding skills</p>
+#navigation li{
+	display: inline-block;
+	margin-right: 5px;
+	margin-left:5px;
+}
 
-					<hr>
+.dots-wrapper{
+	display: flex;
+	padding: 10px;
+}
 
-					<h4>TOP EXPERTISE</h4>
+#dot-1{
+	background-color:  #FC6058;
+}
 
-					<p>Fullstack developer with primary focus on Django + React: <a target="_blank" href="deliverables/resume.pdf">Download Resume</a></p>
+#dot-2{
+	background-color:  #FEC02F;
+}
 
-					<div id="skills">
-						<ul>
-							<li>Python</li>
-							<li>Django</li>
-							<li>JavaScript</li>
-							<li>React</li>
-							<li>Flask</li>
-							<li>WordPress</li>
-						</ul>
+#dot-3{
+	background-color:  #2ACA3E;
+}
 
-						<ul>
-							<li>Google Maps API</li>
-							<li>Major Databases</li>
-                            <li>Microsoft Azure</li>
-							<li>HTML/CSS</li>
-							<li>Java/C/C++</li>
-							<li>Android Development</li>
-						</ul>
+.browser-dot{
+	background-color: black;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	margin: 5px;
 
-					</div>
+	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
 
-				</div>
+}
 
-				
-				<div class="social-links">
-					<h4>Education</h4>
-					<div id="skills">
-						<div style="display: inline; padding: 50px 0;">
-							<a target="_blank" href="https://appliedtechnology.humber.ca/programs/computer-engineering-technology.html"><img id="humber_logo" src="static/images/Humber_Logo_Black.png" width="42px" height="40px" style="display: inline;"></a>
-						</div>
-						<div style="display: inline; width: 300px;">
-							<p>Humber College<br>Computer Engineering Technology<br>January,2019 - April,2021</p>
-							<p>Dean's Honors List, GPA 3.9</p>
-						</div>
-					</div>
 
-					<div id="skills">
-						<div style="display: inline; padding: 50px 0;">
-							<a target="_blank" href="https://courses.edx.org/certificates/da11f01d31024d72a249f15eb139a883"><img id="humber_logo" src="static/images/harvard_logo.png" width="42px" height="40px" style="display: inline;"></a>
-						</div>
-						<div style="display: inline;width: 300px;">
-							<p>Harvard Univesity<br>CS50's Web Programming<br>with Python and JavaScript</p>
-						</div>
-					</div>
-				</div>
+.left-column{
+	grid-area: left-column;
+	padding-top:50px;
+	padding-bottom: 50px;
+}
 
-			</div>
+#profile_pic{
+	display: block;
+	margin:0 auto;
 
-		</div>
-	</section>
+	height: 200px;
+	width: 200px;
+	object-fit: cover;
+	border:2px solid var(--borderColor);
+}
 
-	<section class="s1">
-		<div class="main-container">
-			<h3 style="text-align: center;">Some of my past projects</h3>
 
-			<div class="post-wrapper">
+#theme-options-wrapper{
+	display: flex;
+	justify-content: center;
+}
 
-				<div>
-					<div class="post">
-						<img class="thumbnail" src="static/images/dash.jpg">
-						<div class="post-preview">
-							<h6 class="post-title">Laboratory Management System</h6>
-							<p class="post-intro">Designed built & mantained a the lab managment system for FOI Laboratories</p>
-							<a href="templates/post.html">Read More</a>
-						</div>
-					</div>
-				</div>
+.theme-dot{
+	height: 30px;
+	width: 30px;
+	background-color: black;
+	border-radius: 50%;
 
-				<div>
-					<div class="post">
-						<img class="thumbnail" src="static/images/ecom.jpg">
-						<div class="post-preview">
-							<h6 class="post-title">Online Store - CoursePost Title</h6>
-							<p class="post-intro">Online store with paypal payments intergration and guest user shopping</p>
-							<a href="templates/post.html">Read More</a>
-						</div>
-					</div>
-				</div>
+	margin: 5px;
+	border:2px solid var(--themeDotBorder);
 
-				<div>
-					<div class="post">
-						<img class="thumbnail" src="static/images/membership site.jpg">
-						<div class="post-preview">
-							<h6 class="post-title">Membership Website</h6>
-							<p class="post-intro">Modulized guide for online courses with step by  step intructions</p>
-							<a href="templates/post.html">Read More</a>
-						</div>
-					</div>
-				</div>
+	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
 
-			</div>
-		</div>
-	</section>
+	cursor: pointer;
+}
 
-	<section class="s2">
-		<div class="main-container">
-			<a href=""></a>
-			<h3 style="text-align: center;">Get In Touch</h3>
-			<div id="contact-form">
-				<a name="contact"></a>
-				<h4 style="text-align: center;">Gurarshdeep Singh</h4>
-				<div id="social_container">
-					<div>
-						<a id="contact_info" href="tel:4165050435">Mobile: (416)505-0435</a>
-						<br>
-						<a id="contact_info" href="mailto:igurarsh@gmail.com">igurarsh@gmail.com</a>
-					</div>
-					<div style="padding-left: 20px;">
-						<a target="_blank" href="https://www.instagram.com/igurarsh/" class="fa fa-instagram"></a>
-						<a target="_blank" href="https://www.github.com/igurarsh" class="fa fa-github"></a>
-						<a target="_blank" href="https://www.linkedin.com/in/igurarsh/" class="fa fa-linkedin"></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> 
 
-	<script type="text/javascript" src="static/script.js"></script>
-</body>
-</html>
+.theme-dot:hover{
+	border-width: 5px;
+}
+
+
+#light-mode{
+	background-color: #fff;
+}
+
+#blue-mode{
+	background-color: #192734;
+}
+
+#green-mode{
+	background-color: #78866b;
+}
+
+#purple-mode{
+	background-color: #7E4C74;
+}
+
+#settings-note{
+	font-size: 12px;
+	font-style: italic;
+	text-align: center;
+}
+
+.right-column{
+	grid-area: right-column;
+	display: grid;
+	align-content: center;
+
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+
+#preview-shadow{
+	background-color: var(--previewShadow);
+	max-width: 300px;
+	height: 180px;
+	padding-left: 30px;
+	padding-top: 30px;
+}
+
+#preview{
+	width: 300px;
+	border:1.5px solid #17a2b8;
+	background-color: var(--previewBg);
+	padding:15px;
+	position: relative;
+}
+
+.corner{
+	width:7px;
+	height: 7px;
+	border-radius: 50%;
+	border:1.5px solid #17a2b8;
+	background-color: #fff;
+	position: absolute;
+}
+
+#corner-tl{
+	top:-5px;
+	left: -5px
+}
+
+#corner-tr{
+	top:-5px;
+	right: -5px
+}
+
+
+#corner-br{
+	bottom:-5px;
+	right: -5px
+}
+
+
+#corner-bl{
+	bottom:-5px;
+	left: -5px
+}
+
+.about-wrapper{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	padding-bottom: 50px;
+	padding-top: 50px;
+	gap:100px;
+}
+
+
+#skills{
+	display: flex;
+	justify-content: space-evenly;
+	background-color: var(--previewShadow);
+}
+
+.social-links{
+	display: grid;
+	align-content: center;
+	text-align: center;
+}
+
+#social_img{
+	width: 140px;
+	height: 140px;
+}
+
+
+.post-wrapper{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 320px);
+	gap:20px;
+	justify-content: center;
+	padding-bottom: 50px;
+}
+
+.post{
+	border:1px solid var(--borderColor);
+	-webkit-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+	-moz-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+	box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+}
+
+.thumbnail{
+	display: block;
+	width: 100%;
+	height:180px;
+	object-fit: cover;
+}
+
+.post-preview{
+	background-color: #fff;
+	padding:15px;
+}
+
+.post-title{
+	color:black;
+	margin: 0;
+}
+
+.post-intro{
+	color:#4b5156;
+	font-size: 14px;
+}
+
+
+#contact-form{
+	display: block;
+	max-width: 600px;
+	margin: 0 auto;
+	border: 1px solid var(--borderColor);
+	padding: 15px;
+	border-radius: 5px;
+	background-color: var(--mainColor);
+	margin-bottom: 50px;
+
+}
+
+#contact-form label{
+	line-height: 2.7em;
+}
+
+#contact-form textarea{
+	min-height: 100px;
+	font-size: 14px;
+}
+
+#contact_info{
+	font-family: 'Open Sans', sans-serif;
+	color: var(--infoColor);
+	font-size: 20px;
+	cursor: pointer;
+	text-align: left;
+	padding-left: 20px;
+
+}
+
+#contact_info:hover{
+	font-size: 24px;
+}
+
+.fa {
+	padding: 20px;
+	font-size: 30px;
+	width: 30px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 2px;
+	border-radius: 50%;
+	border: var(--infoColor) solid;
+  }
+  
+.fa-instagram {
+	background: #125688;
+	color: white;
+}
+.fa-github{
+	color: var(--infoColor);
+}
+
+.fa-linkedin {
+	background: #007bb5;
+	color: white;
+}
+
+#social_container{
+	display:flex; 
+	justify-content:space-between;
+}
+
+#list_projects{
+	color: var(--list_projects);
+}
+	
+
+@media screen and (max-width: 1200px){
+	.main-container{
+		width: 95%;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.intro-wrapper{
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+			'nav-wrapper'
+			'left-column'
+			'right-column'
+		;
+	}
+
+	.right-column{
+		justify-content: center;
+	}
+
+}
+
+@media screen and (max-width: 548px){
+	#preview-shadow{
+		max-width: 280px;
+		height: 180px;
+		padding-left: 10px;
+		padding-top: 10px;
+	}
+
+	#preview{
+		width: 280px;
+
+	}
+
+	#social_container{
+		display: block;
+		text-align: center;
+	}
+}
